@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "properties": {
+    "costs": {
+      "type": "object",
+      "properties": {
+        "insert": {
+          "type": "integer",
+          "min": 0
+        },
+        "delete": {
+          "type": "integer",
+          "min": 0
+        },
+        "update": {
+          "type": "integer",
+          "min": 0
+        },
+        "match": {
+          "type": "integer",
+          "min": 0
+        }
+      },
+      "required": [
+        "insert",
+        "delete",
+        "update",
+        "match"
+      ],
+      "additionalProperties": false
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "comment": {
+            "type": "string",
+            "minLength": 1
+          },
+          "t1": {
+            "$ref": "#/definitions/node"
+          },
+          "t2": {
+            "$ref": "#/definitions/node"
+          },
+          "distance": {
+            "type": "integer",
+            "min": 0
+          },
+          "operations": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "length": 2,
+              "items": {
+                "oneOf": [
+                  {
+                    "const": null
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "required": [
+          "comment",
+          "t1",
+          "t2",
+          "distance",
+          "operations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "costs",
+    "tests"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "node": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/node"
+          }
+        }
+      },
+      "required": [
+        "label",
+        "children"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

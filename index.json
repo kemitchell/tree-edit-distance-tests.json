@@ -1,0 +1,153 @@
+{
+  "costs": {
+    "insert": 1,
+    "match": 0,
+    "delete": 1,
+    "update": 1
+  },
+  "tests": [
+    {
+      "comment": "identical, single-node",
+      "t1": {
+        "label": "a",
+        "children": []
+      },
+      "t2": {
+        "label": "a",
+        "children": []
+      },
+      "distance": 0,
+      "operations": [
+        [
+          "a",
+          "a"
+        ]
+      ]
+    },
+    {
+      "comment": "different, single-node",
+      "t1": {
+        "label": "a",
+        "children": []
+      },
+      "t2": {
+        "label": "b",
+        "children": []
+      },
+      "distance": 1,
+      "operations": [
+        [
+          "a",
+          "b"
+        ]
+      ]
+    },
+    {
+      "comment": "remove only child",
+      "t1": {
+        "label": "a",
+        "children": [
+          {
+            "label": "b",
+            "children": []
+          }
+        ]
+      },
+      "t2": {
+        "label": "a",
+        "children": []
+      },
+      "distance": 1,
+      "operations": [
+        [
+          "a",
+          "a"
+        ],
+        [
+          "b",
+          null
+        ]
+      ]
+    },
+    {
+      "comment": "remove second of two children",
+      "t1": {
+        "label": "a",
+        "children": [
+          {
+            "label": "b",
+            "children": []
+          },
+          {
+            "label": "c",
+            "children": []
+          }
+        ]
+      },
+      "t2": {
+        "label": "a",
+        "children": [
+          {
+            "label": "b",
+            "children": []
+          }
+        ]
+      },
+      "distance": 1,
+      "operations": [
+        [
+          "a",
+          "a"
+        ],
+        [
+          "c",
+          "b"
+        ],
+        [
+          "b",
+          null
+        ]
+      ]
+    },
+    {
+      "comment": "remove first of two children",
+      "t1": {
+        "label": "a",
+        "children": [
+          {
+            "label": "b",
+            "children": []
+          },
+          {
+            "label": "c",
+            "children": []
+          }
+        ]
+      },
+      "t2": {
+        "label": "a",
+        "children": [
+          {
+            "label": "c",
+            "children": []
+          }
+        ]
+      },
+      "distance": 1,
+      "operations": [
+        [
+          "a",
+          "a"
+        ],
+        [
+          "c",
+          "c"
+        ],
+        [
+          "b",
+          null
+        ]
+      ]
+    }
+  ]
+}

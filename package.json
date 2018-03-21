@@ -1,0 +1,12 @@
+{
+  "name": "tree-edit-distance-tests",
+  "version": "0.0.0",
+  "description": "test suite for tree-edit-distance algorithms",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "repository": "kemitchell/tree-edit-distance-tests.json",
+  "devDependencies": {
+    "ajv": "^6.3.0",
+    "edit-distance": "^1.0.1",
+    "tape": "^4.9.0"
+  }
+}

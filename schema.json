@@ -4,28 +4,28 @@
     "costs": {
       "type": "object",
       "properties": {
-        "insert": {
-          "type": "integer",
-          "min": 0
-        },
         "delete": {
           "type": "integer",
           "min": 0
         },
-        "update": {
+        "insert": {
           "type": "integer",
           "min": 0
         },
         "match": {
           "type": "integer",
           "min": 0
+        },
+        "update": {
+          "type": "integer",
+          "min": 0
         }
       },
       "required": [
-        "insert",
         "delete",
-        "update",
-        "match"
+        "insert",
+        "match",
+        "update"
       ],
       "additionalProperties": false
     },

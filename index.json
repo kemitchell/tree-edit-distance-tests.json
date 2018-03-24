@@ -17,7 +17,7 @@
         "children": []
       },
       "distance": 0,
-      "operations": [
+      "mappings": [
         [
           {
             "type": "match",
@@ -38,7 +38,7 @@
         "children": []
       },
       "distance": 1,
-      "operations": [
+      "mappings": [
         [
           {
             "type": "rename",
@@ -64,7 +64,7 @@
         "children": []
       },
       "distance": 1,
-      "operations": [
+      "mappings": [
         [
           {
             "type": "match",
@@ -104,7 +104,7 @@
         ]
       },
       "distance": 1,
-      "operations": [
+      "mappings": [
         [
           {
             "type": "match",
@@ -149,7 +149,7 @@
         ]
       },
       "distance": 1,
-      "operations": [
+      "mappings": [
         [
           {
             "type": "match",

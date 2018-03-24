@@ -19,7 +19,7 @@ tape('edit-distance', function (t) {
         test.t1, test.t2, children, insert, remove, update
       )
       t.equal(result.distance, test.distance)
-      var solution = result.pairs().map(function (pair) {
+      var mapping = result.pairs().map(function (pair) {
         var t1 = pair[0] ? pair[0].label : null
         var t2 = pair[1] ? pair[1].label : null
         var type
@@ -30,8 +30,8 @@ tape('edit-distance', function (t) {
         return {type: type, t1: t1, t2: t2}
       })
       t.assert(
-        test.operations.some(function (validSolution) {
-          return deepEqual(solution, validSolution)
+        test.mappings.some(function (validMapping) {
+          return deepEqual(mapping, validMapping)
         })
       )
       t.end()

@@ -41,7 +41,7 @@
       "mappings": [
         [
           {
-            "type": "rename",
+            "type": "update",
             "t1": "a",
             "t2": "b"
           }
@@ -112,7 +112,7 @@
             "t2": "a"
           },
           {
-            "type": "rename",
+            "type": "update",
             "t1": "c",
             "t2": "b"
           },

@@ -62,7 +62,7 @@
                       "match",
                       "insert",
                       "remove",
-                      "rename"
+                      "update"
                     ]
                   },
                   "t1": {

@@ -19,10 +19,11 @@
       "distance": 0,
       "operations": [
         [
-          [
-            "a",
-            "a"
-          ]
+          {
+            "type": "match",
+            "t1": "a",
+            "t2": "a"
+          }
         ]
       ]
     },
@@ -39,10 +40,11 @@
       "distance": 1,
       "operations": [
         [
-          [
-            "a",
-            "b"
-          ]
+          {
+            "type": "rename",
+            "t1": "a",
+            "t2": "b"
+          }
         ]
       ]
     },
@@ -64,14 +66,16 @@
       "distance": 1,
       "operations": [
         [
-          [
-            "a",
-            "a"
-          ],
-          [
-            "b",
-            null
-          ]
+          {
+            "type": "match",
+            "t1": "a",
+            "t2": "a"
+          },
+          {
+            "type": "remove",
+            "t1": "b",
+            "t2": null
+          }
         ]
       ]
     },
@@ -102,18 +106,21 @@
       "distance": 1,
       "operations": [
         [
-          [
-            "a",
-            "a"
-          ],
-          [
-            "c",
-            "b"
-          ],
-          [
-            "b",
-            null
-          ]
+          {
+            "type": "match",
+            "t1": "a",
+            "t2": "a"
+          },
+          {
+            "type": "rename",
+            "t1": "c",
+            "t2": "b"
+          },
+          {
+            "type": "remove",
+            "t1": "b",
+            "t2": null
+          }
         ]
       ]
     },
@@ -144,18 +151,21 @@
       "distance": 1,
       "operations": [
         [
-          [
-            "a",
-            "a"
-          ],
-          [
-            "c",
-            "c"
-          ],
-          [
-            "b",
-            null
-          ]
+          {
+            "type": "match",
+            "t1": "a",
+            "t2": "a"
+          },
+          {
+            "type": "match",
+            "t1": "c",
+            "t2": "c"
+          },
+          {
+            "type": "remove",
+            "t1": "b",
+            "t2": null
+          }
         ]
       ]
     }

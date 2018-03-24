@@ -20,10 +20,14 @@ tape('edit-distance', function (t) {
       )
       t.equal(result.distance, test.distance)
       var solution = result.pairs().map(function (pair) {
-        return [
-          pair[0] ? pair[0].label : null,
-          pair[1] ? pair[1].label : null
-        ]
+        var t1 = pair[0] ? pair[0].label : null
+        var t2 = pair[1] ? pair[1].label : null
+        var type
+        if (t1 === t2) type = 'match'
+        else if (t1 === null) type = 'insert'
+        else if (t2 === null) type = 'remove'
+        else type = 'rename'
+        return {type: type, t1: t1, t2: t2}
       })
       t.assert(
         test.operations.some(function (validSolution) {

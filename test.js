@@ -39,7 +39,7 @@ tape('edit-distance', function (t) {
   })
   function children (node) { return node.children }
   function insert () { return suite.costs.insert }
-  function remove () { return suite.costs.delete }
+  function remove () { return suite.costs.remove }
   function update (from, to) {
     return from.label === to.label
       ? suite.costs.match

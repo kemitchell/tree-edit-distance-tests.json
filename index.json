@@ -1,6 +1,6 @@
 {
   "costs": {
-    "delete": 1,
+    "remove": 1,
     "insert": 1,
     "match": 0,
     "update": 1

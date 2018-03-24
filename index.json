@@ -112,6 +112,23 @@
             "t2": "a"
           },
           {
+            "type": "remove",
+            "t1": "c",
+            "t2": null
+          },
+          {
+            "type": "match",
+            "t1": "b",
+            "t2": "b"
+          }
+        ],
+        [
+          {
+            "type": "match",
+            "t1": "a",
+            "t2": "a"
+          },
+          {
             "type": "update",
             "t1": "c",
             "t2": "b"
@@ -150,6 +167,23 @@
       },
       "distance": 1,
       "mappings": [
+        [
+          {
+            "type": "match",
+            "t1": "a",
+            "t2": "a"
+          },
+          {
+            "type": "remove",
+            "t1": "c",
+            "t2": null
+          },
+          {
+            "type": "match",
+            "t1": "b",
+            "t2": "b"
+          }
+        ],
         [
           {
             "type": "match",

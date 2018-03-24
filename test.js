@@ -1,4 +1,5 @@
 var AJV = require('ajv')
+var deepEqual = require('deep-equal')
 var editDistance = require('edit-distance')
 var schema = require('./schema')
 var suite = require('./')
@@ -18,14 +19,16 @@ tape('edit-distance', function (t) {
         test.t1, test.t2, children, insert, remove, update
       )
       t.equal(result.distance, test.distance)
-      t.deepEqual(
-        result.pairs().map(function (pair) {
-          return [
-            pair[0] ? pair[0].label : null,
-            pair[1] ? pair[1].label : null
-          ]
-        }),
-        test.operations
+      var solution = result.pairs().map(function (pair) {
+        return [
+          pair[0] ? pair[0].label : null,
+          pair[1] ? pair[1].label : null
+        ]
+      })
+      t.assert(
+        test.operations.some(function (validSolution) {
+          return deepEqual(solution, validSolution)
+        })
       )
       t.end()
     })

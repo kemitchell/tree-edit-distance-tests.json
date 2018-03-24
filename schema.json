@@ -50,19 +50,24 @@
           },
           "operations": {
             "type": "array",
+            "minItems": 1,
             "items": {
               "type": "array",
-              "length": 2,
+              "minItems": 1,
               "items": {
-                "oneOf": [
-                  {
-                    "const": null
-                  },
-                  {
-                    "type": "string",
-                    "minLength": 1
-                  }
-                ]
+                "type": "array",
+                "length": 2,
+                "items": {
+                  "oneOf": [
+                    {
+                      "const": null
+                    },
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  ]
+                }
               }
             }
           }

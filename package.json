@@ -6,6 +6,7 @@
   "repository": "kemitchell/tree-edit-distance-tests.json",
   "devDependencies": {
     "ajv": "^6.3.0",
+    "deep-equal": "^1.0.1",
     "edit-distance": "^1.0.1",
     "tape": "^4.9.0"
   }
